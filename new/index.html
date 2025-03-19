@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AA MAILAFIYA - Computer Engineering & Software Installation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AA MAILAFIYA</h1>
+        <p>Computer Engineering & Software Installation</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to AA MAILAFIYA</h2>
+            <p>We provide top-notch computer engineering solutions and software installation services.</p>
+            <button onclick="displayMessage()">Click Me</button>
+            <p id="message"></p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Computer Repairs & Maintenance</li>
+                <li>Software Installation & Updates</li>
+                <li>Networking Solutions</li>
+                <li>Hardware Sales & Upgrades</li>
+            </ul>4
+        </section>
+        <section id="upload">
+            <h2>Describe Your Laptop Issue</h2>
+            <div class="upload-container">
+                <input type="file" id="imageUpload" accept="image/*">
+                <textarea id="problemDescription" rows="4" placeholder="Describe your laptop issue..."></textarea>
+                <button onclick="submitProblem()">Submit</button>
+                <p id="responseMessage"></p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@aamailafiya.com</p>
+            <p>Phone: +123 456 7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AA MAILAFIYA. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.color = '#ffcc00';
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.color = 'white';
+            });
+        });
+
+        function displayMessage() {
+            document.getElementById("message").innerText = "Thank you for visiting AA MAILAFIYA!";
+        }
+
+        function submitProblem() {
+            const description = document.getElementById("problemDescription").value;
+            if (description.trim() === "") {
+                document.getElementById("responseMessage").innerText = "Please enter a description of your issue.";
+                return;
+            }
+            document.getElementById("responseMessage").innerText = "Thank you for submitting your issue. Our team will review it and get back to you shortly.";
+        }
+    </script>
+</body>
+</html>

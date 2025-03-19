@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="shortcut icon" href="asset/images/new.jpg" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .login-area {
+            text-transform: capitalize;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: smaller;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+        }
+
+        .login-form {
+            border: 1px;
+            border-style: double;
+            padding: 30px;
+            width: 400px; /* Set a fixed width for desktop */
+        }
+
+        input {
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        label {
+            color: #6316aa;
+        }
+
+        button {
+            padding: 10px;
+            position: relative;
+            left: 100px;
+            background-color: #6316aa;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        input:hover {
+            background-color: rgba(235, 220, 201, 0.87);
+        }
+
+        .create-account {
+            padding: 10px;
+            justify-items: center;
+            position: relative;
+            align-items: center;
+            margin-left: 28%;
+        }
+
+        .Forget-password {
+            padding: 10px;
+            justify-items: center;
+            position: relative;
+            align-items: center;
+            margin-left: 28%;
+        }
+
+        /* Media Query for Mobile Screens */
+        @media (max-width: 768px) {
+            .login-area {
+                top: 50px; /* Adjust top margin for mobile */
+            }
+
+            .login-form {
+                padding: 20px;
+                width: 90%; /* Full width for smaller screens */
+            }
+
+            button {
+                left: 0; /* Center the button */
+                width: 100%; /* Make the button full width */
+                margin-top: 10px;
+            }
+
+            .create-account,
+            .Forget-password {
+                margin-left: 0; /* Remove margin for mobile */
+                text-align: center; /* Center text */
+            }
+        }
+
+        /* Media Query for Small Mobile Screens */
+        @media (max-width: 480px) {
+            .login-form {
+                padding: 15px;
+                width: 95%; /* More width on very small screens */
+            }
+
+            .login-area {
+                top: 30px; /* Adjust top margin for smaller mobile devices */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="login-area">
+    <form class="login-form">
+        <label>email</label>
+        <input type="email" placeholder="Enter your Email" required><br><br>
+        <label>password</label>
+        <input type="password" placeholder="Enter your password" required><br><br>
+        <button type="submit"> Login</button><br><br>
+        <div class="create-account">
+            <a href="register.html"> create account</a>
+        </div>
+        <div class="Forget-password">
+            <a href="forget password.html">Forget password</a>
+        </div>
+    </form>
+</div>
+<button onclick="greet()">click me </button>
+
+ <script src="script.js"></script>
+</body>
+</html>

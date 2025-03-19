@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .register-area {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 50px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            border: 2px double #000;
+            padding: 30px;
+            width: 500px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f6f9fa;
+        
+            
+        }
+
+        label {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        color: #6316aa;
+    
+        }
+
+        input {
+            width: 80%; 
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            width: 90%;
+            font-size: larger;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    
+    input[type="sumbmit"]:hover{
+        background-color: blue;
+    }
+    .register{
+        color: #45a049;
+    }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="register-area">
+        <form>
+            <div class="register"> 
+                <h1>Register Form</h1>
+            </div>
+            <label >Firstname</label>
+            <input type="text" required><br>
+
+            <label for="lastname">Lastname</label>
+            <input type="text"required><br>
+
+            <label for="email">Email</label>
+            <input type="email" required><br>
+
+            <label for="password">Password</label>
+            <input type="password" maxlength="12" minlength="8" required><br>
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" required><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
