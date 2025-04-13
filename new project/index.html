@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>
+        AA MAILAFIYA SALES / sales record
+    </title>
+</head>
+<body>
+   
+<nav>AA MAILAFIYA Pharmacy - Sales Records</nav>
+
+<div class="container">
+<h2>Sales Record Form</h2>
+<form id="saleForm">
+<label for="goods">Goods Bought</label>
+<input type="text" id="goods" name="goods" required />
+
+<label for="price">Price Sold (₦)</label>
+<input type="number" id="price" name="price" required />
+
+<label for="name">Customer Name</label>
+<input type="text" id="name" name="name" required />
+
+<label for="address">Customer Address</label>
+<textarea id="address" name="address" rows="3" required></textarea>
+
+<label for="phone">Customer Phone Number</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="e.g. 08012345678" required />
+
+<label for="receipt">Scan Receipt</label>
+<input type="file" id="receipt" name="receipt" accept="image/*,application/pdf" required />
+
+<button type="submit">Submit</button>
+<div class="success-message" id="successMessage">Sales record submitted successfully!</div>
+</form>
+</div>
+<script src="javascript.js"></script>
+</body>
+</html>
